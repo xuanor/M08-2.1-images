@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.imagesapp"
+    namespace = "com.example.m08_imagenes"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.imagesapp"
+        applicationId = "com.example.m08_imagenes"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

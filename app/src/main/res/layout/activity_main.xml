@@ -1,24 +1,33 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:padding="16dp">
 
-    <!-- add Camera Button to open the Camera -->
     <Button
-        android:id="@+id/camera_button"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="150dp"
-        android:text="Camera" />
+        android:id="@+id/btn_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Carregar des de Galeria" />
 
-    <!-- add ImageView to display the captured image -->
+    <Button
+        android:id="@+id/btn_thumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Carregar Thumbnail de Càmera" />
+
+    <Button
+        android:id="@+id/btn_fullsize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Carregar Full-Size de Càmera" />
+
     <ImageView
-        android:id="@+id/click_image"
-        android:layout_width="350dp"
-        android:layout_height="450dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginBottom="10dp" />
-</RelativeLayout>
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerInside"
+        android:adjustViewBounds="true" />
+</LinearLayout>

@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "ImagesApp"
+rootProject.name = "M08-imagenes"
 include(":app")
  

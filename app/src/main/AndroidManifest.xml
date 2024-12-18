@@ -1,32 +1,32 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.imagesapp">
+    package="com.example.m08_imagenes">
 
     <uses-feature
         android:name="android.hardware.camera"
-        android:required="false" />
+        android:required="true" />
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
-        android:label="Camera App"
-        android:theme="@style/Theme.AppCompat">
+        android:label="@string/app_name"
+        android:theme="@style/Theme.AppCompat.Light">
 
-        <!-- Declaración de la actividad principal -->
-        <activity
-            android:name=".MainActivity"
-            android:exported="true"> <!-- Este atributo es necesario -->
-
+        <activity android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
+
+        <!-- Configuración del FileProvider -->
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.example.cameratest.fileprovider"
+            android:authorities="com.example.m08_imagenes.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
@@ -34,5 +34,4 @@
                 android:resource="@xml/file_paths" />
         </provider>
     </application>
-
 </manifest>

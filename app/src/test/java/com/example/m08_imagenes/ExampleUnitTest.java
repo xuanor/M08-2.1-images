@@ -1,4 +1,4 @@
-package com.example.imagesapp;
+package com.example.m08_imagenes;
 
 import org.junit.Test;
 
